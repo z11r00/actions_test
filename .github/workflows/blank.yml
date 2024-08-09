@@ -32,8 +32,8 @@ jobs:
       - name: 列出所有文件
         run: |
           ls -l
-      - name: Add & Commit
-        uses: EndBug/add-and-commit@v9
+      - name: Auto-commit files
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          #add: 'json-data'
-          github_token: ${{secrets.PUSH_TOKEN}}
+          commit_message: 'Automatically updated files'
+          file_pattern: '*.json'
