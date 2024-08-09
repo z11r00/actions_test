@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: main
-          token: ${{ secrets.PUSH_TOKEN }}
+          token: ${{ secrets.PUSH_TOKEN }}  # 自定义的个人推送TOKEN
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -43,5 +43,3 @@ jobs:
           git add data.json
           git commit -m "Add changes" || echo "No changes to commit"
           git push origin main
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
