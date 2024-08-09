@@ -14,7 +14,7 @@ data = {
 }  
   
 # 将字典写入到JSON文件中  
-with open('data.json', 'w', encoding='utf-8') as f:  
+with open('rocdatas/202408/data.json', 'w', encoding='utf-8') as f:  
     json.dump(data, f, ensure_ascii=False, indent=4)  
   
 print('JSON文件已生成。')

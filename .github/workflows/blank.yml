@@ -40,6 +40,6 @@ jobs:
         run: |
           git config --local user.email "ZFC19950314"
           git config --local user.name "fuchao"
-          git add data.json
+          git add .
           git commit -m "Add changes" || echo "No changes to commit"
           git push origin main
