@@ -32,8 +32,12 @@ jobs:
       - name: 列出所有文件
         run: |
           ls -l
-      - name: Auto-commit files
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'Automatically updated files'
-          file_pattern: '*.json'
+      - name: Commit changes
+        run: |
+          git config --local user.email "ZFC19950314"
+          git config --local user.name "fuchao"
+          git add .
+          git commit -m "Add changes" || true
+          git push origin HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
