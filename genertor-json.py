@@ -1,5 +1,6 @@
 import json  
 import os  
+import random
   
 # 创建一个包含一些数据的字典  
 data = {  
@@ -14,8 +15,10 @@ data = {
     }  
 }  
   
+random_str = ["data.json", "api.json"]
+  
 # 定义文件路径  
-file_path = 'rocdatas/202408/data.json'  
+file_path = 'rocdatas/202408/'+random.choice(random_str)  
   
 # 确保目录存在  
 directory = os.path.dirname(file_path)  
